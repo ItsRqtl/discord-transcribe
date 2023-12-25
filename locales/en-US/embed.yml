@@ -1,0 +1,21 @@
+global:
+  error:
+    title: "Error"
+  cooldown:
+    description: "You have to wait {cooldown} seconds before using this command again."
+
+transcribe:
+  no-voice-note: "There was no voice note in the message."
+  user-in-queue: "You are already having a message queued for transcription. Please wait for it to finish."
+  message-in-queue: "The message is already in the queue for transcription."
+  too-long: "The voice message exceeds the maximum length of 1 minutes."
+
+  queue:
+    title: "Transcription Queue"
+    starting: "Your message is being transcribed. Please wait for it to finish."
+    added: "Your message is queued for transcription. Queue Position: {pos}"
+
+  transcribed:
+    title: "Transcription Result"
+    no-transcription: "> {ori}\n> *There was no transcription for the voice message. (Possible empty message)*\n> ID: `{uid}`"
+    footer: "Transcription by @rqtl._. | Powered by OpenAI Whisper"

@@ -1,0 +1,21 @@
+global:
+  error:
+    title: "错误"
+  cooldown:
+    description: "命令还在冷却中，请稍等 {cooldown} 秒后再试一次。"
+
+transcribe:
+  no-voice-note: "这不是一個语音消息。"
+  user-in-queue: "你已经有一个语音消息在转换队列中。请等待让它先完成。"
+  message-in-queue: "这个消息已经在转换队列中。"
+  too-long: "这个语音消息超出了一分钟的时间上限。"
+
+  queue:
+    title: "转换队列"
+    starting: "你的语音消息正在转换中。"
+    added: "你的语音消息已被加入转换队列。目前位置：{pos}"
+
+  transcribed:
+    title: "转换结果"
+    no-transcription: "> {ori}\n> *无法转换这个语音信息。 (有可能是空白信息)*\n> ID: `{uid}`"
+    footer: "Transcription by @rqtl._. | Powered by OpenAI Whisper"

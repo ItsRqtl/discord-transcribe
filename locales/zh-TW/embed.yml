@@ -1,0 +1,21 @@
+global:
+  error:
+    title: "錯誤"
+  cooldown:
+    description: "指令還在冷卻中，請稍等 {cooldown} 秒後再試一次。"
+
+transcribe:
+  no-voice-note: "這不是一個語音訊息。"
+  user-in-queue: "你已經有一個語音訊息在轉換佇列中。請等待讓它先完成。"
+  message-in-queue: "這個訊息已經在轉換佇列中。"
+  too-long: "這個語音訊息超出了一分鐘的時間上限。"
+
+  queue:
+    title: "轉換佇列"
+    starting: "你的語音訊息正在轉換中。"
+    added: "你的語音訊息已被加入轉換佇列。目前位置：{pos}"
+
+  transcribed:
+    title: "轉換結果"
+    no-transcription: "> {ori}\n> *無法轉換這個語音訊息。(有可能是空白訊息)*\n> ID: `{uid}`"
+    footer: "Transcription by @rqtl._. | Powered by OpenAI Whisper"
