@@ -15,8 +15,7 @@ class I18n:
     Provides a simple interface to get translated strings.
     """
 
-    # locales = ("en-US", "zh-TW", "zh-CN")
-    locales = ("en-US",)
+    locales = ("en-US", "zh-TW", "zh-CN")
     i18n_instance = PyI18n(locales, loader=PyI18nYamlLoader("locales", namespaced=True))
     i18n_get = i18n_instance.gettext
 
