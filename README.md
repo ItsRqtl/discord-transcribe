@@ -4,7 +4,8 @@ A open source python bot that transcribe voice notes to text with [OpenAI Whispe
 
 ## Installation
 
-You can install all required modules/library by doing `pip install -r requirements.txt`  
+Before using the bot, make sure ffmpeg is installed in PATH  
+You can install most required modules/library by doing `pip install -r requirements.txt`  
 You might need other requirements for [OpenAI Whisper](https://github.com/openai/whisper) if you want to run it with GPU.  
 You also need to create a file `.env` under the same directory with your token in it. (`token=INSERT_YOUR_TOKEN`, check `.env.example`)
 

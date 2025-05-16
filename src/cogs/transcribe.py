@@ -59,18 +59,18 @@ class Transcribe(BaseCog):
         await ctx.defer(ephemeral=True)
         if not self.has_voice_note(message):
             embed = Embed.make_error_embed("transcribe.no-voice-note", ctx)
-            await self.transcribe.reset_cooldown(ctx)
+            self.transcribe.reset_cooldown(ctx)
         elif not await self.client.is_owner(ctx.author) and await self.database.user_in_queue(
             ctx.author.id
         ):
             embed = Embed.make_error_embed("transcribe.user-in-queue", ctx)
-            await self.transcribe.reset_cooldown(ctx)
+            self.transcribe.reset_cooldown(ctx)
         elif await self.database.message_in_queue(message.id):
             embed = Embed.make_error_embed("transcribe.message-in-queue", ctx)
-            await self.transcribe.reset_cooldown(ctx)
+            self.transcribe.reset_cooldown(ctx)
         elif message.attachments[0].duration_secs > 60:
             embed = Embed.make_error_embed("transcribe.too-long", ctx)
-            await self.transcribe.reset_cooldown(ctx)
+            self.transcribe.reset_cooldown(ctx)
         elif data := await self.database.get_transcription(message.id, message.channel.id):
             embed = Embed.make_transcribed_embed(
                 message, data["text"], data["id"], data["created_at"], ctx
